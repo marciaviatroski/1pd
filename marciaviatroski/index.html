@@ -1,63 +1,93 @@
-HTML
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Blog Tech - Boas-vindas</title>
+    <title>Meu Blog Tech - Livro 80px</title>
     <style>
-        header {
-            background-color: blue;
-            color: white;
-            padding: 20px;
+        body { font-family: 'Courier New', monospace; margin: 0; padding: 0; background-color: #f0f0f0; color: #333; }
+        header { background-color: blue; color: white; padding: 20px; text-align: center; border-bottom: 4px solid darkblue; }
+        main { max-width: 600px; margin: 20px auto; padding: 20px; background-color: white; border: 2px solid #ccc; }
+        
+        /* Estilo da seção do livro e Pix */
+        .produto-pix {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
+            border: 2px dashed #999;
+            padding: 15px;
+            background-color: #fafafa;
         }
 
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 15px;
+        /* CONTAINER DA IMAGEM EXATAMENTE 80x80 */
+        .capa-livro-80px {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #333;
+            background-color: #654321; /* Cor de fundo imitando o livro antigo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            overflow: hidden; /* Garante que nada saia dos 80x80 */
+            image-rendering: pixelated; /* Melhora a aparência de imagens pequenas */
         }
 
-        /* Estilização para ajustar a imagem da página */
-        .imagem-destaque {
+        /* Imagem simulada dentro do container 80x80 */
+        .capa-livro-80px img {
             width: 100%;
-            max-width: 600px;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .preco { font-size: 1.2em; font-weight: bold; color: green; margin: 5px 0; }
+        .codigo-pix {
+            background-color: #eee;
+            padding: 8px;
+            border: 1px solid #ccc;
+            font-family: monospace;
+            font-size: 0.8em;
+            width: 90%;
+            word-wrap: break-word;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Meu blog tech</h1>
-        <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+        <h1>[MINI_BLOG_TECH]</h1>
+        <p>CONHECIMENTO EM PIXELS</p>
     </header>
 
     <main>
         <section>
-            <h2>Seja bem-vindo(a)!</h2>
-            <p>Obrigado por visitar nosso site.</p>
+            <h2>Livro: Algorítmos Mini</h2>
+            <p>Uma versão micro do nosso guia prático.</p>
         </section>
 
-        <section>
-            <h2>Sobre o nosso site</h2>
-            <p>
-                Este é um espaço dedicado ao universo da tecnologia. Aqui você poderá
-                conhecer novidades sobre programação, inteligência artificial, robótica,
-                segurança digital e outras inovações que fazem parte do nosso dia a dia.
-                Nosso objetivo é compartilhar conhecimento e despertar o interesse pela
-                tecnologia de forma simples e acessível.
-            </p>
+        <section class="produto-pix">
+            <!-- AREA DA IMAGEM 80x80 -->
+            <div class="capa-livro-80px">
+                <!-- Se você tiver uma imagem real de 80x80, coloque-a aqui: -->
+                <!-- <img src="livro_80x80.png" alt="Mini capa do livro"> -->
+                
+                <!-- Simulação visual direta no CSS/HTML (opcional se não tiver a imagem) -->
+                <div style="width: 60px; height: 70px; background-color: #8b4513; border: 1px solid #333; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <div style="width: 40px; height: 5px; background-color: #ffd700; margin-bottom: 2px;"></div>
+                    <div style="width: 30px; height: 5px; background-color: #ffd700;"></div>
+                </div>
+            </div>
 
-            <!-- Tag da Imagem de Livro -->
-            <img src="livro-programacao.jpg" alt="Livro antigo sobre Algoritmos e Programação" class="imagem-destaque">
+            <p class="preco">R$ 80,00 (PIX)</p>
+
+            <p>Escaneie o QR Code ou copie o código abaixo:</p>
+            
+            <!-- Imagem do QR Code (substitua pelo seu arquivo real) -->
+            <img src="qrcode_exemplo.png" alt="QR Code Pix" style="width: 150px; height: 150px; border: 1px solid #ccc;">
+
+            <textarea class="codigo-pix" rows="4" readonly>00020101021126580014br.gov.bcb.pix0136SEU_CHAVE_PIX_AQUI520400005303986540580.005802BR5913SEU_NOME_AQUI6009CURITIBA62070503***6304ABCD</textarea>
         </section>
     </main>
 
